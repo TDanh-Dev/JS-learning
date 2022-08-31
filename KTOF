@@ -1,0 +1,24 @@
+const kelvin = 200; //tempereature in kelvin
+console.log(kelvin);
+
+//convert K to °C
+const celsius = kelvin - 273; 
+console.log(celsius);
+
+// convert °C to °F 
+let fahrenheit = celsius * (9/5) + 32;
+console.log(fahrenheit);
+
+// round down the number from a decimal to a natural
+fahrenheit = Math.floor(fahrenheit);
+
+// log in the console using interpolation
+console.log(`the temperature is ${fahrenheit} degrees Farhenheit.`);
+
+//convert °C in N
+let newton = celsius*(33/100);
+console.log(newton);
+
+//round down newton
+newton = Math.floor(newton);
+console.log(`The temperature is ${newton} Newton`)
