@@ -1,0 +1,72 @@
+
+//valeur de départ
+const poids = 54;
+const taille = 1.62;
+const taillecarre = Math.pow(taille,2);
+const age = 20;
+console.log(`Pour un poids de ${poids}kg, une taille de ${taille}m et un âge de ${age}ans :`)
+
+//calcul IMC
+let IMC = poids/taillecarre;
+IMC = Math.floor(IMC);
+
+
+
+
+
+
+//calcul KCAL/jour (metabolisme de base MB)
+let MB = poids*10 + (taille*100)*6.25 - age*5;
+//arrondir
+MB = Math.floor(MB);
+//affichage
+console.log(`Votre IMC est de à peu près ${IMC} et vous êtes censé(e) consommer ${MB} Kcal environ. MAIS ATTENDEZ
+`);
+
+
+
+
+
+
+//ajustement selon HOMME sédentaire/actif/sportif
+const MBH = MB + 5;
+let MBHs = MBH*1.37;
+let MBHa = MBH*1.55;
+let MBHS = MBH*1.8;
+
+//arrondir
+MBHs = Math.floor(MBHs);
+MBHa = Math.floor(MBHa);
+MBHS = Math.floor(MBHS);
+
+
+//affichage
+console.log(`Si vous êtes un HOMME, votre consommation devrait être peu près de ${MBH} Kcal.
+Plus de précision : 
+- un sédentaire : ${MBHs} Kcal
+- un actif : ${MBHa} Kcal
+- un sportif : ${MBHS} Kcal
+`);
+
+
+
+
+//ajustement selon FEMMME sédentaire/actif/sportif
+const MBF = MB - 161
+let MBFs = MBF*1.37;
+let MBFa = MBF*1.55;
+let MBFS = MBF*1.8;
+
+
+//arrondir
+MBFs = Math.floor(MBFs);
+MBFa = Math.floor(MBFa);
+MBFS = Math.floor(MBFS);
+
+
+//affichage
+console.log(`Si vous êtes une FEMME, votre consommation devrait être peu près de ${MBF} Kcal.
+Plus de précision : 
+- une sédentaire : ${MBFs} Kcal
+- une active : ${MBFa} Kcal
+- une sportive : ${MBFS} Kcal`);
