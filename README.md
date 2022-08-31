@@ -1,2 +1,2 @@
 # JS-learning
-My codes while I'm learning JS
+My codes while I'm learning JS on CodeCademy
